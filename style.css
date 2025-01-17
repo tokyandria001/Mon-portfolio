@@ -6,6 +6,7 @@
 body{
     background: url(image/pexels-jackgittoes-975399.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     color: #ffffff;
     font-family:Arial, Helvetica, sans-serif;
     overflow: hidden;
