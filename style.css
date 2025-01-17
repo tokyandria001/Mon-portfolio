@@ -254,19 +254,19 @@ h2 {
 }
 
 .card[for="c1"] {
-    background-image: url('../image/pexels-joshsorenson-976873.jpg');
+    background-image: url('image/pexels-joshsorenson-976873.jpg');
     background-size: cover;
 }
 .card[for="c2"] {
-    background-image: url('../image/verne.jpg');
+    background-image: url('image/verne.jpg');
     background-size: cover;
 }
 .card[for="c3"] {
-    background-image: url('../image/musculation.jpeg');
+    background-image: url('image/musculation.jpeg');
     background-size: cover;
 }
 .card[for="c4"] {
-    background-image: url('../image/pexels-maltelu-5276099.jpg');
+    background-image: url('image/pexels-maltelu-5276099.jpg');
     background-size: cover;
 }
 
