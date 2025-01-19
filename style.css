@@ -393,11 +393,22 @@ input:checked + label .description {
     color: #fff;
     font-weight: 500;
     width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .card-content button{
     width: 60px;
     height: 30px;
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
 
 
