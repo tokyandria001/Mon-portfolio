@@ -126,3 +126,10 @@ text.animate([
     text.style.strokeDasharray = 'none';
     text.style.strokeDashoffset = '0';
 };
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu-items');
+    const hamburger = document.querySelector('.hamburger');
+    menu.classList.toggle('active'); // Afficher / cacher le menu
+    hamburger.classList.toggle('active'); // Ajouter l'animation hamburger
+}
