@@ -76,6 +76,79 @@ h1{
     font-weight: lighter;
 }
 
+@media screen and (max-width: 768px) {
+    /* Alignement du logo et du menu */
+    header {
+        flex-direction: column; /* Empiler le logo et le menu */
+        height: auto; /* Adapter la hauteur */
+        padding: 10px;
+    }
+
+    header .logo {
+        margin: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    header .menu-items {
+        display: none; /* Masquer le menu par défaut */
+        flex-direction: column; /* Disposer les éléments en colonne */
+        align-items: center;
+        width: 100%; /* Prendre toute la largeur disponible */
+        margin-top: 20px;
+    }
+
+    header .menu-items li {
+        margin: 10px 0;
+    }
+
+    header .menu-items li a {
+        font-size: 18px;
+    }
+
+    /* Afficher le menu lorsque le bouton hamburger est cliqué */
+    header .menu-items.active {
+        display: flex;
+    }
+
+    /* Style du bouton hamburger */
+    header .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ffffff;
+        margin-right: 20px;
+    }
+
+    /* Icônes du hamburger */
+    header .hamburger div {
+        width: 35px;
+        height: 5px;
+        background-color: #ffffff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Animation du hamburger */
+    header .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 9px;
+    }
+
+    header .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    header .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -9px;
+    }
+}
+
 /*** PRESENTATION *****/
 
 svg{
