@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: url(image/pexels-jackgittoes-975399.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body{
     overflow: hidden;
 }
 
-.loader{
+.loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@ body{
     height: 100vh;
 }
 
-.page-transition{
+.page-transition {
     position: absolute;
     top: 0;
     background-color: #635543;
@@ -31,7 +31,7 @@ body{
     height: 0%;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     display: flex;
@@ -43,7 +43,7 @@ header{
     background: rgba(0, 0, 0, 0.7);
 }
 
-header .logo{
+header .logo {
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bold;
@@ -51,28 +51,28 @@ header .logo{
     color: #ffffff;
 }
 
-header .menu-items{
+header .menu-items {
     display: flex;
     list-style: none;
     margin-right: 40px;
 }
 
-header .menu-items li{
+header .menu-items li {
     margin-left: 20px;
 }
 
-header .menu-items li a{
+header .menu-items li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
     font-weight: lighter;
 }
 
-.active{
+.active {
     text-decoration: underline;
 }
 
-.container{
+.container {
     position: absolute;
     top: 0;
     display: flex;
@@ -82,7 +82,7 @@ header .menu-items li a{
     width: 100%;
 }
 
-h1{
+h1 {
     font-size: 100px;
     font-weight: lighter;
 }
