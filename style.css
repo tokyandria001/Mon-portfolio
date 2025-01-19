@@ -385,7 +385,6 @@ input:checked + label .description {
 
 .card-content span{
     position: absolute;
-    left: 50%;
     transform: translateX(-50%, -50%);
     font-size: 16px;
     opacity: 0;
