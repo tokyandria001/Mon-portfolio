@@ -6,7 +6,7 @@ pageTransition = () => {
     });
 
     timeline.to(".page-transition", {
-        duration: 1,
+        duration: 0.7,
         height: "100%",
         top: "0%"
     });

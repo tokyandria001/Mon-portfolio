@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(image/pexels-jackgittoes-975399.jpg);
+    background: url(image/pexels-therato-8634489.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
@@ -31,7 +31,7 @@ body {
     height: 0%;
 }
 
-header {
+nav {
     position: absolute;
     top: 0;
     display: flex;
@@ -43,7 +43,7 @@ header {
     background: rgba(0, 0, 0, 0.7);
 }
 
-header .logo {
+nav .logo {
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bold;
@@ -51,17 +51,17 @@ header .logo {
     color: #ffffff;
 }
 
-header .menu-items {
+nav .menu-items {
     display: flex;
     list-style: none;
     margin-right: 40px;
 }
 
-header .menu-items li {
+nav .menu-items li {
     margin-left: 20px;
 }
 
-header .menu-items li a {
+nav .menu-items li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
@@ -87,45 +87,41 @@ h1 {
     font-weight: lighter;
 }
 
-/* --- Responsive Styles --- */
 
 @media screen and (max-width: 768px) {
-    /* Alignement du logo et du menu */
-    header {
-        flex-direction: column; /* Empiler le logo et le menu */
-        height: auto; /* Adapter la hauteur */
+    nav {
+        flex-direction: column; 
+        height: auto; 
         padding: 10px;
     }
 
-    header .logo {
+    nav .logo {
         margin: 0;
         font-size: 24px;
         text-align: center;
     }
 
-    header .menu-items {
-        display: none; /* Masquer le menu par défaut */
-        flex-direction: column; /* Disposer les éléments en colonne */
+    nav .menu-items {
+        display: none; 
+        flex-direction: column;
         align-items: center;
-        width: 100%; /* Prendre toute la largeur disponible */
+        width: 100%;
         margin-top: 20px;
     }
 
-    header .menu-items li {
+    nav .menu-items li {
         margin: 10px 0;
     }
 
-    header .menu-items li a {
+    nav .menu-items li a {
         font-size: 18px;
     }
 
-    /* Afficher le menu lorsque le bouton hamburger est cliqué */
-    header .menu-items.active {
+    nav .menu-items.active {
         display: flex;
     }
 
-    /* Style du bouton hamburger */
-    header .hamburger {
+    nav .hamburger {
         display: block;
         background-color: transparent;
         border: none;
@@ -135,8 +131,7 @@ h1 {
         margin-right: 20px;
     }
 
-    /* Icônes du hamburger */
-    header .hamburger div {
+    nav .hamburger div {
         width: 35px;
         height: 5px;
         background-color: #ffffff;
@@ -144,18 +139,17 @@ h1 {
         transition: 0.4s;
     }
 
-    /* Animation du hamburger */
-    header .hamburger.active div:nth-child(1) {
+    nav .hamburger.active div:nth-child(1) {
         transform: rotate(-45deg);
         position: relative;
         top: 9px;
     }
 
-    header .hamburger.active div:nth-child(2) {
+    nav .hamburger.active div:nth-child(2) {
         opacity: 0;
     }
 
-    header .hamburger.active div:nth-child(3) {
+    nav .hamburger.active div:nth-child(3) {
         transform: rotate(45deg);
         position: relative;
         top: -9px;
@@ -191,7 +185,7 @@ svg{
 }
 
 h2 {
-    color: #e8841a;
+    color: #a700cd;
     font-size: 2.2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -214,7 +208,7 @@ h2 {
 }
 
 .item h3 {
-    color: #e8841a;
+    color: #a700cd;
     font-size: 1.7rem;
     margin-bottom: 10px;
 }
@@ -251,72 +245,176 @@ h2 {
 /*** COMPETENCES ****/
 
 .competence {
-    position: relative;
-    top: 100px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
-    justify-items: center;
-    align-items: center;
-    padding: 20px; 
-}
-
-.maincontainer {
-    width: 100%;
-    height: auto;
-    perspective: 1000px; 
-}
-
-.carte {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg); 
-    transition: transform 0.6s;
-}
-
-.carte:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: rotateY(180deg); 
-}
-
-.face, .dos {
+    width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 30px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
-    width: 100%;
+}
+
+.competence .lang{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    position: relative;
+}
+
+.lang label{
     height: 100%;
-    backface-visibility: hidden; 
-}
-
-.face {
+    z-index: 2;
+    width: 16.66%; 
     display: flex;
-    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
     align-items: center;
-    background-color: rgba(147, 147, 147, 0.7);
-}
-
-.face img {
-    width: 50%;
-    height: auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.dos {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #a2a2a2;
-    padding: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  #tab-1:checked ~ header .tab-1,
+  #tab-2:checked ~ header .tab-2,
+  #tab-3:checked ~ header .tab-3,
+  #tab-4:checked ~ header .tab-4,
+  #tab-5:checked ~ header .tab-5,
+  #tab-6:checked ~ header .tab-6{
     color: #fff;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    transform: rotateY(180deg); 
-}
+  }
+  
+  .lang .slider{
+    position: absolute;
+    height: 85%;
+    border-radius: inherit;
+    background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+    transition: all 0.3s ease;
+  }
+  
+  #tab-1:checked ~ .lang .slider{
+    left: 0%;
+    width: 85px;
+    transform: translateX(5%);
+  }
+  #tab-2:checked ~ .lang .slider{
+    left: 33%;
+    width: 85px;
+    transform: translateX(-100%);
+  }
+  #tab-3:checked ~ .lang .slider{
+    left: 65.5%;
+    width: 85px;
+    transform: translateX(-200%);
+  }
+  #tab-4:checked ~ .lang .slider{
+    left: 97.6%;
+    width: 85px;
+    transform: translateX(-300%);
+  }
+  #tab-5:checked ~ .lang .slider{
+    left: 130.6%;
+    width: 85px;
+    transform: translateX(-400%);
+  }
+  #tab-6:checked ~ .lang .slider{
+    left: 162.2%;
+    width: 85px;
+    transform: translateX(-500%);
+  }
+  
+  .competence input[type="radio"]{
+    display: none;
+  }
+  
+  .card-area{
+    overflow: hidden;
+  }
+  
+  .card-area .cards{
+    display: flex;
+    width: 600%;
+  }
+  
+  .cards .row{
+    width: 16.66%;
+  }
+  
+  .cards .row-1{
+    transition: all 0.3s ease;
+  }
+  
+  #tab-1:checked ~ .card-area .cards .row-1{
+     margin-left: 0%;
+  }
+  #tab-2:checked ~ .card-area .cards .row-1{
+    margin-left: -16.66%;
+  }
+  #tab-3:checked ~ .card-area .cards .row-1{
+     margin-left: -33.33%;
+  }
+  #tab-4:checked ~ .card-area .cards .row-1{
+     margin-left: -50%;
+  }
+  #tab-5:checked ~ .card-area .cards .row-1{
+     margin-left: -66.66%;
+  }
+  #tab-6:checked ~ .card-area .cards .row-1{
+     margin-left: -83.33%;
+  }
+  
+  .row .langage{
+    margin: 20px 0;
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .langage .price{
+    font-size: 65px;
+    font-weight: 600;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .row .features li{
+    display: flex;
+    font-size: 15px;
+    list-style: none;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .features li i{
+    background: linear-gradient(#D5A3FF 0%, #77A5F8 100%);
+    background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
+  
+  .features li span{
+    margin-left: 10px;
+  }
+  
+  .competence button{
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .competence button:hover{
+    transform: scale(0.98);
+  }
 
 
 /**** PROJETS ****/
