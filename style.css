@@ -385,6 +385,27 @@ h2 {
     transform: scale(0.98);
   }
 
+  @media (max-width: 600px){
+    .competence{
+        width: 400px;
+    }
+
+    .lang .slider{
+        position: absolute;
+        height: 85%;
+        border-radius: inherit;
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .langage .price{
+        font-size: 40px;
+        font-weight: 600;
+        position: relative;
+        font-family: 'Noto Sans', sans-serif;
+    }
+  } 
+
 
 /**** PROJETS ****/
 
