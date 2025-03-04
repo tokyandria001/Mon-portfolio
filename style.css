@@ -109,6 +109,7 @@ svg {
         padding: 10px;
         width: 200px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
     }
 
     .menu-items li {
@@ -411,15 +412,15 @@ h2 {
 
 .container{
     width: 100%;
-    display: flex; /* Utilise flexbox pour centrer */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 .rows{
     display: flex;
     gap: 30px;
-    justify-content: center; /* Centre horizontalement les éléments dans .rows */
+    justify-content: center;
     flex-wrap: wrap;
 }
 
