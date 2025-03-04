@@ -499,7 +499,7 @@ h2 {
         margin-bottom: 30px;
     }
 
-    .container{
+    body{
         overflow-y: scroll;
     }
 }
