@@ -128,8 +128,9 @@ text.animate([
 };
 
 function toggleMenu() {
-    const menu = document.querySelector('.menu-items');
     const hamburger = document.querySelector('.hamburger');
-    menu.classList.toggle('active'); // Afficher / cacher le menu
-    hamburger.classList.toggle('active'); // Ajouter l'animation hamburger
+    const menuItems = document.querySelector('.menu-items');
+    
+    hamburger.classList.toggle('active');
+    menuItems.classList.toggle('active');
 }
