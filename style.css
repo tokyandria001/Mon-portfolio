@@ -59,6 +59,7 @@ nav {
 .menu-items a {
     color: white;
     text-decoration: none;
+    text-decoration: none;
 }
 
 .hamburger {
@@ -81,24 +82,46 @@ nav {
 }
 
 .container {
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1 {
     text-align: center;
-    padding: 50px 20px;
-}
-
-svg {
-    max-width: 100%;
-    height: auto;
-}
-
-.text {
-    font-size: 3rem;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
     font-weight: bold;
-    color: #333;
+    letter-spacing: 1px;
 }
+
+.present {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+}
+
+.present p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+.contact {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
 
 @media (max-width: 768px) {
+    
+
     .menu-items {
         display: none;
         position: absolute;
@@ -410,7 +433,7 @@ h2 {
 
 /**** PROJETS ****/
 
-.container{
+.containers{
     width: 100%;
     display: flex;
     justify-content: center;
