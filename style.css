@@ -144,89 +144,147 @@ h1 {
 
 /*** PRESENTATION *****/
 
-svg{
+.timeline {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
     max-width: 900px;
-    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    transform: translateY(-50%);
+    top: 50%;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-#text{
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2;
-    font-size: 80px;
-    font-family: 'Roboto', sans-serif;
-}
-
-@keyframes bgFadeIn{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-.section {
-    margin-bottom: 40px;
+.event {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
     padding: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-h2 {
-    color: #a700cd;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: bold;
+.event-content {
+    text-align: center;
 }
 
-.item {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.item:hover {
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-
-.item h3 {
-    color: #a700cd;
-    font-size: 1.7rem;
+.event h3 {
+    font-size: 20px;
+    color: #333;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
-.item p {
-    font-size: 1.2rem;
+.event p {
+    font-size: 14px;
+    color: #888;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #3498db;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.event:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+}
+
+/* Style du bouton "Détails" */
+.info-tab {
+    position: absolute;
+    bottom: -30px; /* Place l'onglet juste sous l'événement */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-tab:hover {
+    background-color: #2980b9;
+}
+
+/* Style du panneau latéral */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -75%; /* Masqué à droite par défaut */
+    width: 75%;
+    height: 100%;
+    background-color: #333;
     color: #fff;
-    margin-bottom: 10px;
+    transition: right 0.5s ease-in-out; /* Animation pour l'ouverture et la fermeture */
+    z-index: 1000;
+    overflow-y: auto;
 }
 
-.school {
-    font-weight: bold;
-    color: #444;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.panel-content {
+    padding: 20px;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
+.close-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-btn:hover {
+    background-color: #c0392b;
+}
+
+#panel-info {
+    margin-top: 20px;
+}
+
+/* Animation d'ouverture et de fermeture */
+.side-panel.open {
+    right: 0;
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .event {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .timeline::before {
+        left: 20px;
     }
 }
-
-.section, .item {
-    animation: fadeIn 0.8s ease-out;
-}
-
 
 /*** COMPETENCES ****/
 
@@ -526,7 +584,7 @@ h2 {
 
 .contact-info{
     margin-top: 20px;
-    position: relative;
+    position: absolute;
     width: 100%;
     bottom: 0;
     transform: translateY(-50%);
@@ -535,7 +593,7 @@ h2 {
 
 .contact-method{
     width: 220px;
-    height: 140px;
+    height: 80px;
     border-radius: 5px;
     display: inline-block;
     background: #a700cd;
@@ -553,7 +611,7 @@ h2 {
     height: 100%;
     font-size: 30px;
     border-radius: 5px;
-    line-height: 140px;
+    line-height: 85px;
     background: linear-gradient(to top left, #a700cd, #590ce8);
     z-index: 1;
     transition: transform 0.6s;
@@ -569,4 +627,11 @@ h2 {
 
 .contact-method:hover i{
     transform:  translateY(-40px);
+}
+
+@media (max-width: 974px){
+    .contact-info{
+        position: relative;
+        margin-top: 60px;
+    }
 }

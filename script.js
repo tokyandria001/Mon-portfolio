@@ -68,6 +68,35 @@ barba.init({
     ]
 });
 
+// PRESENTATION
+
+document.addEventListener("DOMContentLoaded", function () {
+    const infoTabs = document.querySelectorAll('.info-tab');
+    const sidePanel = document.getElementById('side-panel');
+    const closeBtn = document.getElementById('close-btn');
+    const panelInfo = document.getElementById('panel-info');
+
+    // Fonction pour ouvrir le panneau latéral
+    infoTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const eventContent = this.previousElementSibling; // Contenu de l'événement
+            const year = eventContent.querySelector('h3').textContent;
+            const formation = eventContent.querySelector('p').textContent;
+
+            // Remplir le panneau avec les informations de l'événement cliqué
+            panelInfo.innerHTML = `<h2>${year}</h2><p>${formation}</p>`;
+
+            // Ouvrir le panneau latéral
+            sidePanel.classList.add('open');
+        });
+    });
+
+    // Fonction pour fermer le panneau latéral
+    closeBtn.addEventListener('click', function () {
+        sidePanel.classList.remove('open');
+    });
+});
+
 
 // COMPETENCES
 
