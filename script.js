@@ -76,15 +76,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.getElementById('close-btn');
     const panelInfo = document.getElementById('panel-info');
 
+    // Détails supplémentaires pour chaque événement
+    const eventDetails = {
+        event1: {
+            year: '2016 - 2020',
+            formation: 'Baccalauréat Scientifique (Mention Assez Bien)',
+            details: "J'ai obtenu mon baccalauréat scientifique avec mention assez-bien. Pendant mes années de seconde à terminale, j'ai choisi les options ICN (Informatique et Création Numérique) et ISN (Informatique et Sciences du Numérique) afin de développer mes compétences en programmation et d'acquérir des bases solides en informatique. C'est à cette période que j'ai découvert ma passion pour le développement web et l'aéronautique, deux secteurs qui me fascinent encore aujourd'hui"
+        },
+        event2: {
+            year: '2020 - 2022',
+            formation: 'Licence MPCIE / MI',
+            details: "J'ai débuté mes études supérieures avec une licence MPCIE dans le but de poursuivre une carrière dans le secteur aérien. Cependant, la crise du Covid-19 a profondément bouleversé mes projets, car ce secteur a été sévèrement impacté. Cette situation m'a conduit à revoir mes aspirations professionnelles et à me réorienter vers de nouvelles opportunités, notamment dans le domaine de l'informatique."
+        },
+        event3: {
+            year: '2022 - 2024',
+            formation: 'Licence en Informatique',
+            details: "Les différents cours d'informatique rencontré en Licence MPCIE m'ont conduit à poursuivre en Licence Informatique. Je suis donc actuellement en Licence 3 Professionnelle en applications web, afin d'acquérir des compétences solides en développement web."
+        },
+        event4: {
+            year: 'Depuis 2024',
+            formation: 'Licence Professionnelle en applications web',
+            details: "La licence en informatique étant principalement composée de cours théoriques, j'avais envie de 'mettre la main à la pâte' et de mettre directement en pratique mes compétences acquises. C'est pourquoi j'ai décidé de poursuivre mes études en Licence Professionnelle, afin de pouvoir réaliser un stage de 4 mois en entreprise. Cette expérience pratique me permet de renforcer mes connaissances et de mieux comprendre les défis du monde professionnel, tout en développant des compétences concrètes en lien avec mes projets futurs."
+        }
+    };
+
     // Fonction pour ouvrir le panneau latéral
     infoTabs.forEach(tab => {
         tab.addEventListener('click', function () {
-            const eventContent = this.previousElementSibling; // Contenu de l'événement
-            const year = eventContent.querySelector('h3').textContent;
-            const formation = eventContent.querySelector('p').textContent;
+            const eventId = this.parentElement.id; // ID de l'événement (event1, event2, event3)
+            const event = eventDetails[eventId];
 
             // Remplir le panneau avec les informations de l'événement cliqué
-            panelInfo.innerHTML = `<h2>${year}</h2><p>${formation}</p>`;
+            panelInfo.innerHTML = `
+                <h2>${event.year}</h2><br/>
+                <p>${event.formation}</p><br/>
+                <p><strong>Détails:</strong> ${event.details}</p>
+            `;
 
             // Ouvrir le panneau latéral
             sidePanel.classList.add('open');
